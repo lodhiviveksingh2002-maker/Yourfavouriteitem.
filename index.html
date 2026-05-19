@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YourFavouriteItem</title>
+
+<style>
+body {margin:0;font-family:Arial;background:#f5f5f5;}
+
+header {
+  background:#111;
+  color:#fff;
+  padding:15px;
+  text-align:center;
+}
+
+.logo {
+  font-size:22px;
+  font-weight:bold;
+  color:#25D366;
+}
+
+.banner {
+  background:#25D366;
+  color:white;
+  text-align:center;
+  padding:10px;
+}
+
+.container {padding:15px;}
+
+.product {
+  background:white;
+  padding:15px;
+  margin:15px 0;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+  text-align:center;
+}
+
+.product img {
+  width:100%;
+  max-height:200px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+button {
+  margin:5px;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.order {background:#25D366;color:white;}
+.pay {background:#ff9800;color:white;}
+
+footer {
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">YourFavouriteItem</div>
+  <p>Clothes & Electronics Store</p>
+</header>
+
+<div class="banner">
+🔥 Direct WhatsApp Order | Fast Delivery
+</div>
+
+<div class="container">
+
+<div class="product">
+  <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+  <h3>Stylish T-Shirt</h3>
+  <p>₹299</p>
+  <button class="order" onclick="orderNow('Stylish T-Shirt ₹299')">Order</button>
+  <button class="pay" onclick="payNow()">Pay Now</button>
+</div>
+
+<div class="product">
+  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+  <h3>Sports Shoes</h3>
+  <p>₹999</p>
+  <button class="order" onclick="orderNow('Sports Shoes ₹999')">Order</button>
+  <button class="pay" onclick="payNow()">Pay Now</button>
+</div>
+
+<div class="product">
+  <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+  <h3>Smartphone</h3>
+  <p>₹6999</p>
+  <button class="order" onclick="orderNow('Smartphone ₹6999')">Order</button>
+  <button class="pay" onclick="payNow()">Pay Now</button>
+</div>
+
+</div>
+
+<footer>
+📞 WhatsApp: 9285370327 | UPI: 9285370327@ybl
+</footer>
+
+<script>
+function orderNow(product){
+  var phone = "919285370327";
+  var msg = "Hello, I want to order " + product;
+  window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg));
+}
+
+function payNow(){
+  window.open("upi://pay?pa=9285370327@ybl&pn=YourFavouriteItem");
+}
+</script>
+
+</body>
+</html>
